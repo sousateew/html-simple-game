@@ -1,0 +1,104 @@
+main {
+    background-color: #151515;
+    max-width: 633px;
+    margin: 20px auto;
+    color: white;
+
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main > div.header {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/preview.png);
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 163px;
+    display: flex;
+
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px 30px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main > div.header > h1 {
+    font-weight: 400;
+    font-size: 60px;
+
+    color: #FFFFFF;
+}
+
+main > div.content {
+    padding: 15px 15px 20px;
+}
+
+main > div.content p > a {
+    padding-left: 4px;
+    padding-right: 4px;
+
+    background-color: white;
+    color: black;
+    text-decoration: none;
+
+    transition: all 1s;
+}
+
+main > div.content p > a:hover {
+    background: none;
+    padding: 0;
+    color: white;
+    /* font-size: 16px; */
+}
+
+main > div.content h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+main > div.content p {
+    color: rgba(255, 255, 255, 0.5);
+    /* opacity: 50%; */
+    
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+main > div.content p::selection {
+    color: white;
+}
+
+main > div.content > div.info-content {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* main > div.content > div.info-content button {
+    min-height: 31px;
+
+    margin-top: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, 0);
+    
+    color: white;
+    padding: 8px 25px 8px 25px;
+
+    transition: all 1s;
+
+    cursor: pointer;
+}
+
+main > div.content > div.info-content button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-right: 40px;
+    padding-left: 40px;
+} */

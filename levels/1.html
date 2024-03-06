@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - Untitled Game</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/min.notify.js"></script>
+
+    <link rel="stylesheet" href="../assets/styles/global.css">
+    <link rel="stylesheet" href="../assets/styles/game.css">
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2 id="actualPage">Level 1</h2>
+
+    <div class="note-container">
+        <div class="content">
+            <h3>Comandos</h3>
+            <p>moveRight(steps)</p>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="game-container">
+            <img id="avatar" src="../assets/images/avatar.png" alt="Avatar" style="transition: all 1s ease 0s;">
+            <p>MOVA ATÉ AQUI</p>
+        </div>
+        
+        <div class="code-container">
+            <textarea spellcheck="false" name="jsCode" id="jsCode" cols="30" rows="10" placeholder="Faça o avatar chegar até o outro lado usando JavaScript."></textarea>
+        </div>
+
+        <button id="button" onclick="compileCode()">Run code</button>
+    </main>
+
+    <script>
+        window.onload = (event) => {
+            var mainElement = document.getElementsByTagName("body")[0];
+            mainElement.style.transition = "1s all";
+            mainElement.style.opacity = "100%";
+        }
+
+        checkInterval = setInterval(() => {
+            var avatarInPosition = checkAvatarInPosition(832);
+
+            if (avatarInPosition){
+                $.notify("Boa, você conseguiu colocar o personagem na posição correta", {
+                    position: "bottom-right",
+                    className: "success"
+                })
+                clearInterval(checkInterval)
+            }
+        }, 500)
+    </script>
+    <script type="text/javascript" src="../assets/scripts/game.js"></script>
+</body>
+</html>
